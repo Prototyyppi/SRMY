@@ -1,0 +1,580 @@
+* {font-family: "Russo One"; font-size: 25;}
+/** {font-family: "Agency FB"; font-size: 30;} tai carter one*/
+* { margin: 0; padding: 0; }
+
+
+h1 {
+	font-size: 25;
+
+	padding-top:7px;
+	padding-bottom:2px;
+	text-align: center;
+}
+.hrelementti {
+	width:70%;
+	line-height: 1px;
+	margin: 0px;
+	background-color: black;
+
+}
+.tapahtuma2teksti {
+	font-size: 21;
+	text-align: center;
+	font-family: orbitron;
+}
+
+.jasen {
+	font-size: 16;
+	padding-left:25%;
+	padding-right:25%;
+	padding-top:0;
+	padding-bottom:2px;
+	text-decoration: none;
+}
+
+.jasen2 {
+	font-size: 16;
+	padding-left:25%;
+	padding-right:25%;
+	padding-top:0;
+	padding-bottom:2px;
+	text-decoration: none;
+
+	font-weight: bold;
+}
+.jassen {
+	background: green;
+	z-index: 50; 
+	}
+
+
+
+body {
+	background-image: url(tausta.png);
+}
+.hattu ul{
+
+    list-style-type: none; /*poistaa pisteet, jos semmoisia */
+	background: black;
+	color: white;
+	position: fixed;
+	width: 100%;
+	display: block;
+	z-index: 200;
+/*	box-shadow: 0px 5px 10px black;*/
+
+
+}
+.header{
+
+    	list-style-type: none; /*poistaa pisteet, jos semmoisia */
+	background: black;
+	color: white;
+	position: fixed;
+	width: 100%;
+	display: block;
+	z-index: 10;
+	box-shadow: 0px 5px 10px black;
+
+
+}
+
+#laskuri {
+font-family: orbitron;
+font-weight:bold;
+text-align: center;
+font-size: 22px;
+color: red;
+margin-bottom: 25px;
+}
+
+.hattu li {
+
+	float: left;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: auto;
+	z-index: 200;
+
+
+
+}
+
+/*.tausta {
+
+	background: black;
+	margin: 2%;
+	padding: 2%;
+	color: white;
+	width: 40%;
+}
+*/
+.hattu li:hover {
+
+	float: left;
+	width: auto;
+	background: grey;
+
+}
+.loppu li:hover {
+
+	float: left;
+	width: auto;
+	background: grey;
+	
+}
+#teksti {
+
+	padding: 10%;
+	padding-top: 120px;
+	padding-bottom: 2%;
+
+}
+#teksti2 {
+
+	padding: 10%;
+	padding-top: 0px;
+	padding-bottom: 2%;
+
+}
+
+a {
+	color:white;
+	text-decoration: none;
+	z-index: 2;
+
+}
+a:active {
+	color:red;
+	text-decoration: none;
+	z-index: 2;
+
+}
+p {
+	color:black;
+	font-size: 16;
+	text-decoration: none;
+	font-family: "open sans";
+}
+
+ol li {
+	font-size: 16;
+	padding-left: 10%;
+	padding-right: 7%;
+	font-family: "open sans";
+	
+}
+ul li {
+	font-size: 16;
+	padding-left: 10%;
+	padding-right: 7%;
+	font-family: "open sans";
+	
+}
+.etusivu {
+	font-size: 21;
+	padding-left: 10%;
+	padding-right: 10%;
+
+}
+.yhteystieto {
+	font-size: 21;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+.loppu ul{
+
+    list-style-type: none; /*poistaa pisteet, jos semmoisia */
+	background: black;
+	color: white;
+	position: absolute;
+	width: 100%;
+	display: block;
+
+}
+
+.loppu li {
+
+	float: left;
+	padding: 5px;
+	width: auto;
+	font-size: 20;
+	
+}
+.tapahtumat ul{
+
+	margin-left: 1.5%;
+	margin-top: 10%;
+	position: fixed;
+	width: 17%;
+	display: block;
+	background: #afafaf;
+	opacity: 0.9;
+	border-radius: 15px;
+	font-family: "Russo One";
+
+}
+
+.tapahtumat li{
+
+	padding-left: 5%;
+	padding-top: 10%;
+	list-style-type: none;
+	display: block;
+	z-index: -1;
+	font-family: "Russo One";
+
+}
+.tapahtumat {
+
+	z-index: 50;
+}
+
+
+
+.tapahtumat2 ul{
+
+	margin-left: 81.5%;
+	margin-top: 10%;
+	position: fixed;
+	width: 17%;
+	display: block;
+	background: #afafaf;
+	opacity: 0.9;
+	border-radius: 15px;
+	font-family: "Russo One";
+
+}
+
+.tapahtumat2 li{
+
+	padding-left: 5%;
+	padding-top: 10%;
+	list-style-type: none;
+	display: block;
+	z-index: -1;
+	font-family: "Russo One";
+
+}
+.tapahtumat2 {
+
+	z-index: 55;
+}
+
+
+.image {
+	transform: rotate(0deg);
+	width: 200px;
+
+	margin-top: 100px;
+	margin-left: 10%;
+	padding: 20px;
+	position: relative;
+	float: left;
+	clear: right;
+	z-index: 0;
+	display: block;
+	opacity: 1;
+}
+.image2 {
+	transform: rotate(-7deg);
+	width: 200px;
+	margin: 25px;
+	margin-top: 145px;
+	margin-right: 10%;
+	padding: 10px;
+	position: relative;
+	float: right;
+	overflow: auto;
+	clear: left;
+	box-shadow: 0px 5px 10px black;
+	opacity: 1;
+	display: block;
+}
+.image8 {
+	transform: rotate(0deg);
+	width: 40%;
+	margin: 30px;
+	margin-bottom: 60px;
+	margin-top: -120px;
+	padding: 10px;
+	overflow: auto;
+	box-shadow: 0px 5px 10px black;
+	opacity: 1;
+    	margin-right: 40%;
+	margin-left: 30%;
+	display: block;
+	float: left;
+
+}
+.image3 {
+	transform: rotate(7deg);
+	width: 200px;
+	margin: auto;
+	padding: 10px; 
+	position: relative;
+	float: right;
+	overflow: auto;
+	box-shadow: 0px 5px 10px black;
+	display: block;
+	margin-right: 25%;
+	margin-bottom: 50px;
+	
+
+}
+.harmaa {
+	background: #e8e8e8;
+	margin-left: 20%;
+	margin-right: 20%;
+	z-index: -5;
+	padding-bottom: 7%;
+	box-shadow: 0px 5px 30px black;
+
+
+}
+
+.fb {
+	width: 50%;
+	padding-bottom: 5%;
+	z-index: 5;
+
+
+	overflow: hidden;
+
+}
+.drop {
+
+	margin-left: 0%;
+	margin-top: 45px;
+	position: fixed;
+	width: 200px;
+	display: block;
+	background: black;
+	opacity: 0;
+
+
+}
+
+.drop li{
+
+	padding-left: 5%;
+	padding-top: 10%;
+	list-style-type: none;
+	display: block;
+	z-index: 500;
+	color: white;
+
+}
+.kuvakehys {
+
+	border: 2px solid black;
+	width:100%;
+	padding-right:20px;
+	padding-bottom:30px;
+	margin: auto;
+	box-sizing: border-box;
+	background-color: white;
+
+
+}
+
+.kuvakehys:hover {
+
+	border: 2px solid red;
+	width:100%;
+	padding-right:20px;
+	margin: auto;
+	box-sizing: border-box;
+}
+.kuva {
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:20px;
+	margin-bottom:20px;
+
+	width:100%;
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+
+
+}
+
+
+
+
+.kuvateksti {
+	font-size: 16;
+	font-style: italic;
+	text-decoration: none;
+	font-family: "open sans";
+	margin-left: 25px;
+	box-sizing: border-box;
+	text-align: center;
+	position: relative;
+	height:120px;
+
+
+}
+
+.kuvatekstir {
+	font-size: 16;
+	font-style: italic;
+	text-decoration: none;
+	font-family: "open sans";
+	margin-left: 25px;
+	box-sizing: border-box;
+	text-align: center;
+	position: relative;
+	height:50px;
+
+
+}
+.kuvataulukko {
+	width: 23%;
+
+	display: table;
+	float: left;
+	padding: 9px;
+	margin-left: 4px;
+	position: relative;	
+
+	
+}
+.koko {
+
+	/*overflow: hidden;
+	position: relative;*/
+
+
+
+
+}
+@media only screen and (max-width: 902px){
+	.kuvataulukko {
+	margin: auto;
+	right: -25%;
+	clear: left;
+	}
+	.kuvakehys {
+
+	
+	height:100%;
+
+}
+}
+@media only screen and (max-width: 1800px){
+	.kuvataulukko {
+	width: 46%;
+	}
+}
+@media only screen and (max-width: 1200px){
+	.kuvataulukko {
+	width: 46%;
+	}
+
+	.hattu{
+
+	font-size: 45px;
+	text-align: center;
+
+}
+	a{
+	margin-right: 15px;
+    	padding-top: 20px;
+
+	font-size: 33px;
+	text-align: center;
+
+}
+#red {
+	color: red;
+	font-size: 35px;
+
+}
+#big {
+
+	font-size: 35px;
+
+}
+}
+.phonefix {
+	height:350px;
+
+}
+.headfix {
+	height:30px;
+
+}
+}
+
+@media only screen and (max-width: 1800px){
+	.kuvataulukko {
+	width: 46%;
+	}
+}
+
+@media only screen and (max-width: 1500px){
+	.image3 {
+
+	margin-right: 35%;
+
+	margin-bottom: 50px;
+}
+	.jasen2 {
+	text-align: center;
+}
+	.kuvataulukko {
+	width: 46%;
+	}
+}
+
+@media only screen and (max-width: 969px){
+		.tapahtumat{
+	display: none;
+}
+		.tapahtumat2{
+	display: none;
+}
+.indexheadfix {
+	height:30px;
+
+}
+
+}
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+	padding: 5px;
+	margin-right: 0px;
+	margin-left: auto;
+	width: 22px;
+}
+
+.fa-youtube {
+	background: #CD201F;
+	color: white;
+	padding: 5px;
+	margin-right: 0px;
+
+	width: 22px;
+}
+.yhteystieto {
+	width: 20%;
+	margin-left: 15%;
+	background-color: white;
+}
+
+.PDF {
+	color: red;
+	font-size: 17;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
