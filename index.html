@@ -5,9 +5,8 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="keywords" content="srmy, suomen rytmimusiikin yst&auml;v&auml;t, ry, musiikki, yhdistys, musiikkiyhdistys, b&auml;ndi, juhliin, juhlat, tilaisuudet, h&auml;&auml;t, tapahtumat, kylpyl&auml;, kylpyl&auml;t, el&auml;kel&auml;inen, el&auml;kel&auml;is, haitari, tanssi, musiikki, tanssib&auml;ndi, rytmi&auml; el&auml;m&auml;&auml;n, b&auml;ndileiri, oulu, oulunsalo, suomi">
 
-<link href="srmy.css" rel="stylesheet" type="text/css">
+<link href="src/srmy.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Carter+One|Contrail+One|Open+Sans" rel="stylesheet">
-
 <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Luckiest+Guy|Russo+One" rel="stylesheet">
 
 <!-- sos.media ikonit -->
@@ -37,68 +36,57 @@
 
 </head>
 <body> 
-<script src="jquery321.js"></script>
+<script src="libraries/jquery321.js"></script>
 <script>
 $(document).ready(function(){
-$(document).on("scroll", function() {
-if ($(document).scrollTop() > 70) {
-	$(".header").fadeTo(5, 0.7);
+    $(document).on("scroll", function() {
+    if ($(document).scrollTop() > 70) {
+        $(".header").fadeTo(5, 0.7);
 
 
-}
-else {
-//	$(".hattu").css("z-index", 200);
-	$(".header").css({opacity:'1'});
+    }
+    else {
+    //	$(".hattu").css("z-index", 200);
+        $(".header").css({opacity:'1'});
 
-}
-});
+    }
+    });
 
-$(".drop").hide().css({opacity:'1'});
+    $(".drop").hide().css({opacity:'1'});
 
-$("#img1").on("click", function(){
-$("#img1").fadeOut(500).fadeIn(500);
-});
+    $("#img1").on("click", function(){
+        $("#img1").fadeOut(500).fadeIn(500);
+    });
 
-$("#img2").on("click", function(){
-$("#img2").fadeOut(500).fadeIn(500);
-});
+    $("#img2").on("click", function(){
+        $("#img2").fadeOut(500).fadeIn(500);
+    });
 
-$("#eka").on("click", function(){
+    $("#eka").on("click", function(){
+        $(".drop").fadeToggle();
+    });
 
-$(".drop").fadeToggle();
+    $(".header").on("mouseover", function(){
+        $(".header").css("opacity", "1");
 
-
-});
-
-$(".header").on("mouseover", function(){
-$(".header").css("opacity", "1");
-
-if($(document).scrollTop() > 70) {
-$(".header").on("mouseleave", function(){
-$(".header").css("opacity", "0.7");
-
-});
-}
-else if($("html").offset().top <= 70) {
-$(".header").on("mouseleave", function(){
-$(".header").css("opacity", "1");
+        if($(document).scrollTop() > 70) {
+            $(".header").on("mouseleave", function(){
+                $(".header").css("opacity", "0.7");
+            });
+        } else if($("html").offset().top <= 70) {
+            $(".header").on("mouseleave", function(){
+                $(".header").css("opacity", "1");
+            });
+        }
+    });
 
 });
-}
-});
-
-
-
-
-
-});
-
 </script>
 
 
 
 <script>
-// Mihin lasketaan
+// Laskuri
 var countDownDate = new Date("Feb 14, 2019 12:00:00").getTime();
 //tekee millisekunneiksi
 
@@ -107,9 +95,9 @@ var x = setInterval(function() {
     var now = new Date().getTime();
     var ero = countDownDate - now;
     var days = Math.floor(ero / (86400000));
-//tulevan päivän millisekunnit/ päivässä olevat millisekunnit
+    //tulevan päivän millisekunnit/ päivässä olevat millisekunnit
     var hours = Math.floor((ero % (86400000)) / (3600000));
-//päivistä jäänyt jakojäännös, jaetaan tunteihin ja pyöristys alas jne...
+    //päivistä jäänyt jakojäännös, jaetaan tunteihin ja pyöristys alas jne...
     var minutes = Math.floor((ero % (3600000)) / (60000));
     var seconds = Math.floor((ero % (60000)) / 1000);
 
@@ -128,10 +116,10 @@ var x = setInterval(function() {
 <div class="hattu">
 <ul>
 <li><a href="index.html"><span  id="big" style="color:#ff4f4f;">S<span id="big"  style="color:chartreuse;">R<span  id="big" style="color:orange;">M<span  id="big" style="color:#4f92ff;">Y</a></li>
-<li><a href="ajankohtaista.html">Ajankohtaista</a></li>
-<li><a href="yhteystiedot.html"> Yhteystiedot</a></li>
-<li><a href="historia.html"> Historia</a></li>
-<li><a href="kuvat.html"> Kuvia</a></li>
+<li><a href="pages/ajankohtaista.html">Ajankohtaista</a></li>
+<li><a href="pages/yhteystiedot.html"> Yhteystiedot</a></li>
+<li><a href="pages/historia.html"> Historia</a></li>
+<li><a href="pages/kuvat.html"> Kuvia</a></li>
 </ul>
 </div></div>
 
@@ -140,25 +128,13 @@ var x = setInterval(function() {
 <li><span style="font-size: 22;">Tulevat tapahtumat:</span><br>
 <span style="font-size: 15;">Painamalla punaisista lisätietoa </span></li>
 
-<li><a href=YST_KIVITIPPU_14_02_2019.PNG><span style="color:red; font-size: 16;">Ystävänpäivä kivitipussa<br/>Kivitippu, Lappajärvi</br>14.02 - 17.02.2019</a></li></span>
+<li><a href=src/docs/YST_KIVITIPPU_14_02_2019.PNG><span style="color:red; font-size: 16;">Ystävänpäivä kivitipussa<br/>Kivitippu, Lappajärvi</br>14.02 - 17.02.2019</a></li></span>
 
+<li><a href=src/docs/TAPAHTUMAT_2019.PNG><span style="color:red; font-size: 16;">Vuoden 2019 kohteet<br/> </br></a></li></span>
 
-<li><a href=TAPAHTUMAT_2019.PNG><span style="color:red; font-size: 16;">Vuoden 2019 kohteet<br/> </br></a></li></span>
-
-<!--
-<li>Rytmiä elämään Kivitippu<br/> Kylpylä Kivitippu, Lappajärvi</br>15 - 18.2.2018</a></li></span>
-<span style="color:black;">
-</span>
-<span style="color:black;">
-</span>
-<li><a href=LUOSTO1217.pdf><span style="color:red; font-size: 16;">Tuntureiden pikkujoulu<br/> Ametistikylpylä Luosto</br>9-12.11.2017</a></li></span>
--->
 <li></br></li>
 </ul>
 </div>
-
-
-
 
 
 <div class="tapahtumat2">
@@ -167,10 +143,6 @@ var x = setInterval(function() {
 <li id="laskuri"></li>
 </ul>
 </div>
-
-
-
-
 
 
 <div class="drop">
@@ -183,46 +155,8 @@ var x = setInterval(function() {
 </div>
 <div class="harmaa">
 <div class="indexheadfix"></div>
-<img id="img1" class="image" src="srmy.png"></img>
-<!--<img id="img2" class="image2" src="erkki.jpg"></img>
+<img id="img1" class="image" src="images/srmy.png"></img>
 
-
-<div class="content1">
-<ul>
-<li><a href="http://www.srmy.fi"> srmy</a></li>
-<li>srmy</li>
-<li>srmy</li>
-<li>srmy</li>
-</ul>
-</div>
-
-<div class="content2">
-<ul>
-<li><a href="http://www.srmy.fi"> srmy</a></li>
-<li>srmy</li>
-<li>srmy</li>
-<li>srmy</li>
-</ul>
-</div>
-
-<div class="content3">
-<ul>
-<li><a href="http://www.srmy.fi"> srmy</a></li>
-<li>srmy</li>
-<li>srmy</li>
-<li>srmy</li>
-</ul>
-</div>
-
-<div class="content4">
-<ul>
-<li><a href="http://www.srmy.fi"> srmy</a></li>
-<li>srmy</li>
-<li>srmy</li>
-<li>srmy</li>
-</ul>
-</div>
--->
 
 <p id="teksti">
 <span style="font-weight:900; font-size:16">   SRMY (Suomen Rytmimusiikin Ystävät ry)</span>  toimii elävän rytmimusiikin edistäjänä ja puolestapuhujana. Keskeisenä tavoitteena on tarjota kaiken ikäisille musiikinharrastajille tukea ja mahdollisuuksia erillaisen rytmimusiikin harrastamiseen ja esittämiseen. 
@@ -230,7 +164,7 @@ Järjestämme alan koulutusta ja rytmimusiikkitapahtumia. Tuemme monipuolisesti 
 Aiheeseen liittyviä ehdotuksia ja ideoita otetaan ilomielin vastaan.
 Tervetuloa nettisivuillemme ja myös mukaan muuhun toimintaamme!</br></br></p>
 <p id="teksti">
-<img id="img2" class="image8" src="erkki.jpg"></img>
+<img id="img2" class="image8" src="images/erkki.jpg"></img>
 <span style="font-weight:900; font-size:16">Yhdistyksen toiminta:</span>
    Yhdistyksen tarkoituksena on herättää, ylläpitää ja kehittää rytmimusiikkikulttuuria ja rytmimusiikin harrastusta, toimia rytmimusiikkitarpeen tyydyttämiseksi ja siihen perustuvan harrastustoiminnan kehittämiseksi, koota eri ikäisiä rytmimusiikin harrastajia yhteiseen toimintaan ja edistää harjoitus- ja harrastusmahdollisuuksien sekä esiintymistilaisuuksien järjestämistä eri-ikäisille ja erityyppisille esiintyjärymille.
 </br></br></p>
@@ -255,35 +189,7 @@ Toimintansa tukemiseksi yhdistys:
 <li>toimeenpanee asianomaisen luvan saatuaan arpajaisia, myyjäisiä, varainkeräyksiä ja huvitilaisuuksia ja järjestää maksullisia konsertteja.</li>
 </ol>
 </div>
-<!--
-<p id="teksti">
-<span style="font-size:22">
-AJANKOHTAISTA:
-</span>
-<br>
-Rytmiä Elämään -tapahtuma Kylpylähotelli Kuntorannassa Varkaudessa 24-27.8.2017 uusitulla ohjelmalla. Bussikuljetuksia mm. Oulusta, Rovaniemeltä, Kajaanista...
-Tiedustelut ja paikkavaraukset puh. 045-133 4670. <a class="PDF" href=kuntoranta.pdf>PDF mainos</a>
-<br><br>
-Rautalankamusiikin ystävien kokoontumisajo Kalajoen Sani- kylpylään 29.9.2017 - 1.10 .2017. Rautalankamusiikkia, huumoria ja iloista ohjelmaa aamusta iltaan. Estradilla RAMY House Band, Salaiset Akentit, Steel, The NordBeaT, The Aftons. Tiedustelut ja varaukset puh. 045-133 4670.  <a class="PDF" href=KALAJOKIKUTSUU.pdf>PDF mainos</a>
-<br><br>
-Tuntureiden pikkujoulu Luoston ametistikylpylässä 9 - 12.11.2017. Musiikkia, huumoria, tietokilpailuja, yhteislaulua, soittokursseja, konsertteja, asiapitoista ohjelmaa aamusta iltaan.
-Tiedustelut ja varaukset puh. 045-133 4670.
-<br><br>
-Rytmiä-Elämään tapahtuma uudistuneessa kylpylähotelli Kivitipussa 15 - 18.2.2018. Musiikkia ja iloista ohjelmaa. Tiedustelut ja varaukset puh. 045-133 4670.
-<br><br>
-Kevätkirmaus ametistikylpylässä Luostolla 19 - 22. 4.2018. Tiedustelut ja varaukset puh. 045-133 4670.
-<br><br>
-<span style="font-size:22">
-MENNEITÄ:</span><br>
-MUISTOJEN TANSSIT 16.6.2017</br>
-Tangokuningatar Arja Sipola ja Jukka Honka tahdittavat Muistojen tanssit Kempeleen työväentalolla (Koskelantie 24, Kempele) pe 16.6.2017 klo 19 - 23. Kahvila-ravintola (A-oikeuksin) toimii, ja ohjelmassa on myös arvontaa ja huumoria. Tanssit ja soitto alkavat jo klo 19:00, joten aamuyöksi ehtii nukkumaan ja muihin mukaviin hommiin... TERVEDTULOA VIIHTYMÄÄN !!!
-</br></br>
-Suosittu ja maineikas bändileiri Oulussa jällee 7-12.7.2017. Tarjolla soiton, laulun, esiintymisen ja äänentoiston oppia kaikenikäisille ja kaikentasoisille rytmimusiikin harrastajille.
-Lisätiedot ja ilmoittautumiset: www.bandileiri.fi
-</br></br>
 
-</p>
--->
 </div>
 
 <div class="loppu">

@@ -50,7 +50,7 @@ h1 {
 
 
 body {
-	background-image: url(tausta.png);
+	background-image: url(../images/tausta.png);
 }
 .hattu ul{
 
@@ -101,15 +101,6 @@ margin-bottom: 25px;
 
 }
 
-/*.tausta {
-
-	background: black;
-	margin: 2%;
-	padding: 2%;
-	color: white;
-	width: 40%;
-}
-*/
 .hattu li:hover {
 
 	float: left;
@@ -443,15 +434,7 @@ ul li {
 
 	
 }
-.koko {
 
-	/*overflow: hidden;
-	position: relative;*/
-
-
-
-
-}
 @media only screen and (max-width: 902px){
 	.kuvataulukko {
 	margin: auto;
@@ -508,7 +491,7 @@ ul li {
 	height:30px;
 
 }
-}
+
 
 @media only screen and (max-width: 1800px){
 	.kuvataulukko {
