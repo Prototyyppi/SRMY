@@ -30,43 +30,8 @@
 <body> 
 
 <script src="../libraries/jquery321.js"></script>
-<script>
-$(document).ready(function(){
-$(".image").hide().show(300);
-});
+<script src="../src/js/ajankohtaista_jquery.js"></script>
 
-$(document).ready(function(){
-$(document).on("scroll", function() {
-if ($(document).scrollTop() > 10) {
-	$(".header").fadeTo(5, 0.7);
-//	$(".hattu").animate({height: "110%"});
-	}
-else {
-//	$(".hattu").css("z-index", 200);
-	$(".header").fadeTo(5, 1);
-
-}
-});
-
-$(".header").on("mouseover", function(){
-$(".header").css("opacity", "1");
-
-if($(document).scrollTop() > 20) {
-$(".header").on("mouseleave", function(){
-$(".header").css("opacity", "0.7");
-
-});
-}
-else if($("html").offset().top <= 20) {
-$(".header").on("mouseleave", function(){
-$(".header").css("opacity", "1");
-
-});
-}
-});
-
-});
-</script>
 <div class="header">
 <div id="palkki" class="hattu">
 <ul>
@@ -92,7 +57,7 @@ AJANKOHTAISTA:
 </span>
 <br><br>
 
-<a href=../src/docs/TAPAHTUMAT_2019.png><span style="color:red; font-size: 16;">Vuoden 2019 tapahtumat</a>
+<a href=../src/docs/TAPAHTUMAT_2019.PNG><span style="color:red; font-size: 16;">Vuoden 2019 tapahtumat</a>
 <br><br>
 
 <!--<div class="hrelementti">.</div>-->
