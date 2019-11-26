@@ -208,6 +208,20 @@ ul li {
 
 }
 
+.event_list_box {
+	padding-top: 2%;
+	margin-top: 2%;
+	position: relative;
+	display: block;
+	background: #949494;
+	opacity: 0.9;
+	font-family: "Russo One";
+}
+
+.event_list_box li {
+	margin: 2%;
+}
+
 .tapahtumat li{
 
 	padding-left: 5%;
@@ -298,8 +312,21 @@ ul li {
 	margin-left: 30%;
 	display: block;
 	float: left;
-
 }
+
+.front_page_picture {
+	transform: rotate(0deg);
+	width: 40%;
+	margin: 30px;
+	margin-left: 50px;
+	padding: 10px;
+	overflow: auto;
+	box-shadow: 0px 5px 10px black;
+	opacity: 1;
+	display: block;
+	float: left;
+}
+
 .image3 {
 	transform: rotate(7deg);
 	width: 200px;
