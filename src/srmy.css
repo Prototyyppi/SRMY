@@ -215,11 +215,36 @@ ul li {
 	display: block;
 	background: #949494;
 	opacity: 0.9;
-	font-family: "Russo One";
+	box-shadow: 0px 5px 15px black;
 }
 
 .event_list_box li {
-	margin: 2%;
+	padding: 2%;
+	padding-left: 9%;
+}
+
+#event_block {
+	font-family: "Russo One";
+	color:#7c0d0d;
+	font-size: 18;
+}
+
+#event_block_no_link {
+	font-family: "Russo One";
+	color:#000000;
+	font-size: 18;
+}
+
+#event_block_1 {
+	background-color: #2020203b;
+}
+
+#event_block_2 {
+	background-color: #5757573b;
+}
+
+#event_block_1:hover, #event_block_2:hover {
+	background-color: #0000003b;
 }
 
 .tapahtumat li{
